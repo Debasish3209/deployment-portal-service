@@ -7,4 +7,5 @@ public class RegisterRequest {
     private String serviceName;
     private String teamName;
     private String repoUrl;
+    private String branchName;
 }
