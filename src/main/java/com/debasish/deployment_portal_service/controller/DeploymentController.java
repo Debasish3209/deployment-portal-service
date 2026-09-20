@@ -18,5 +18,10 @@ public class DeploymentController {
     public ResponseEntity<String> register(@RequestBody RegisterRequest request) {
         deploymentService.generateFiles(request);
         return ResponseEntity.ok("Service setup generated successfully");
+
+    }
+    @GetMapping("/health")  
+    public ResponseEntity<String> health() {
+        return ResponseEntity.ok("Deployment service is running");
     }
 }
